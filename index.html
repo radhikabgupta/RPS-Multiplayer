@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Multi-Player RPS!</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/live/3.6/firebase.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	 crossorigin="anonymous">
+
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Rock-Paper-Scissors!</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="formPanel">
+			<form id="name-form">
+				<input type="text" id="name-input" placeholder="Your Name">
+				<input id="add-name" type="submit" value="Start">
+			</form>
+		</div>
+		<div class="panel panel-default">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<div class="panel panel-default playerPanel" id="playerPanel1">
+						<div class="panel-heading panelName" style="min-height: 10;">
+							<h3 class="panel-title text-center" id="playerOneName"></h3>
+						</div>
+
+						<div id="p1Rock" class="panel-body panelOption text-center">
+							<div class="option">Rock</div>
+						</div>
+
+						<div id="p1Paper" class="panel-body panelOption text-center">
+							<div class="option">Paper</div>
+						</div>
+
+						<div id="p1Scissors" class="panel-body panelOption text-center">
+							<div class="option">Scissors</div>
+						</div>
+						<div class="panel-body panelStats text-center">
+							<div class="stats" id="player1Stats"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<div class="panel panel-default gamePanel">
+						<h3 class="panel-title text-center" id="waitingNotice"></h3>
+						<h3 class="panel-title text-center" id="roundOutcome">Rock-Paper-Scissors</h3>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<div class="panel panel-default playerPanel" id="playerPanel2">
+						<div class="panel-heading panelName">
+							<h3 class="panel-title text-center" id="playerTwoName"></h3>
+						</div>
+
+						<div id="p2Rock" class="panel-body panelOption text-center">
+							<div class="option">Rock</div>
+						</div>
+
+						<div id="p2Paper" class="panel-body panelOption text-center">
+							<div class="option">Paper</div>
+						</div>
+
+						<div id="p2Scissors" class="panel-body panelOption text-center">
+							<div class="option">Scissors</div>
+						</div>
+
+						<div class="panel-body panelStats text-center">
+							<div class="stats" id="player2Stats"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="chatDisplay"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="chatInput">
+					<div class="chatLabel">Type Your Message!</div>
+
+					<div class="chatPanel">
+						<form id="chat-form">
+							<textarea type="text" id="chat-input"></textarea>
+							<input id="chat-send" type="submit" value="Send">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="assets/js/app.js"></script>
+
+</body>
+
+</html>
