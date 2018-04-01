@@ -224,3 +224,8 @@ h1 {
 .p1Selected{
 	background-color: springgreen;
 }
+
+.playerSelectedOpt{
+	border: 5px solid springgreen;
+	background-color: springgreen;
+}
