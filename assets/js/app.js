@@ -70,7 +70,6 @@ database.ref("/players/").on("value", function(snapshot) {
 
 	// If both players are now present, it's player1's turn
 	if (player1 && player2) {
-		debugger;
 		$("#playerPanel1").addClass("playerPanelTurn");
 
 		$("#waitingNotice").html("Waiting on " + player1Name + " to choose...");
@@ -125,7 +124,6 @@ database.ref("/turn/").on("value", function(snapshot) {
 
 		// Update the display if both players are in the game
 		if (player1 && player2) {
-			debugger;
 			$("#p1Rock").removeClass("playerSelectedOpt");
 			$("#p1Paper").removeClass("playerSelectedOpt");
 			$("#p1Scissors").removeClass("playerSelectedOpt");
@@ -216,15 +214,11 @@ $("#playerPanel1").on("click", ".panelOption", function(event) {
 	if (player1 && player2 && (yourPlayerName === player1.name) && (turn === 1) ) {
 
 		var choice = $(this).text().trim();
-debugger;
 		if (choice === 'Rock'){
-			debugger;
 			$("#p1Rock").addClass("playerSelectedOpt");
 		} else if (choice === 'Paper'){
-			debugger;
 			$("#p1Paper").addClass("playerSelectedOpt");
 		}else if (choice === 'Scissors'){
-			debugger;
 			$("#p1Scissors").addClass("playerSelectedOpt");
 		}
 
@@ -241,15 +235,11 @@ $("#playerPanel2").on("click", ".panelOption", function(event) {
 	if (player1 && player2 && (yourPlayerName === player2.name) && (turn === 2) ) {
 
 		var choice = $(this).text().trim();	
-		debugger;
 		if (choice === 'Rock'){
-			debugger;
 			$("#p2Rock").addClass("playerSelectedOpt");
 		} else if (choice === 'Paper'){
-			debugger;
 			$("#p2Paper").addClass("playerSelectedOpt");
 		}else if (choice === 'Scissors'){
-			debugger;
 			$("#p2Scissors").addClass("playerSelectedOpt");
 		}
 
